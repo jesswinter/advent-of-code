@@ -11,4 +11,7 @@ Console.WriteLine("Andiamo!");
 // Day03.Part1("input/day03-1.txt");
 // Day03.Part2("input/day03-1.txt");
 // Day04.Part1("input/day04-1.txt");
-Day04.Part2("input/day04-1.txt");
+// Day04.Part2("input/day04-1.txt");
+// Day05.Part1("input/day05-1.txt");
+
+Day05.Part2("input/day05-1.txt");
