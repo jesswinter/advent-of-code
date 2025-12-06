@@ -26,25 +26,24 @@ public static class Day04 {
 
     public static int CountAccessibleRollsWithRemove(string[] grid) {
         var charGrid = grid.Select(row => row.ToCharArray()).ToArray();
-        
+
         var nRemoved = 0;
         bool wereAnyAccessible;
         do {
             wereAnyAccessible = false;
-            
-            for (var y=0; y < grid.Length; y++)
-            for (var x = 0; x < grid[y].Length; x++) {
+
+            for (var y = 0; y < grid.Length; y++)
+            for (var x = 0; x < grid[y].Length; x++)
                 if (charGrid[y][x] == '@' && IsAccessible(charGrid, x, y)) {
                     charGrid[y][x] = '.';
                     ++nRemoved;
                     wereAnyAccessible = true;
                 }
-            }
         } while (wereAnyAccessible);
-        
+
         return nRemoved;
     }
-    
+
     public static bool IsAccessible(string[] grid, int x, int y) {
         var nAdjacent = 0;
 
@@ -79,7 +78,7 @@ public static class Day04 {
 
         return nAdjacent < 4;
     }
-    
+
     public static bool IsAccessible(char[][] grid, int x, int y) {
         var nAdjacent = 0;
 
